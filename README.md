@@ -32,6 +32,7 @@ Key, Value 구조의 비정형 데이터를 저장하고 관리하기 위한 오
 
 - POSTING 주제
   1. JS NULL 병합 연산자 (완료)
-  2. JS 객체의 주의점
+  2. JS 객체의 주의점 (완료)
   3. JS || 
   4. java super
+  5. console의 
