@@ -14,11 +14,11 @@
 3. 디렉토리 이동  
   $ cd [디렉토리명]  
   $ cd .. : 부모 디렉토리로 이동  
-  > tip) 디렉토리명이 너무 길 때, 조금만 쓰고 tab키 누르면 자동완성
+  
+> tip) 디렉토리명이 너무 길 때, 조금만 쓰고 tab키 누르면 자동완성
   
 4. 디렉토리 삭제  
-  $ rm -r [디렉토리명]  
-  : -r (remove directories and their contents recursively; 해당 디렉토리 아래 있는 내용들도 삭제한다.)   
+  $ rm -r [디렉토리명] : -r (remove directories and their contents recursively; 해당 디렉토리 아래 있는 내용들도 삭제한다.)   
   
 ---  
 
@@ -45,7 +45,6 @@
 7. 파일 위치 검색  
   $ locate *.log : (확장자가 .log인 파일 찾기) 디렉토리를 뒤지는게 아니라 데이터베이스(mlocate)를 뒤져서 찾는다.  
   $ find . *.log : 디렉토리 뒤짐  
- 
   $ whereis ls  
   $ whereis rm : 실행파일 위치 찾기  
   
