@@ -91,3 +91,44 @@
 2. 소스코드 다운로드 (git 사용)  
   2-1. $ apt-get install git : git 설치  
   2-2. $ git clone [소스코드 url] [디렉토리명] : 소스코드 다운. 명시한 디렉토리에 소스코드 다운받는다.  
+
+---
+### why CLI?  
+1. 순차적 실행 (using semicolon)
+  ex) $ mkdir why; cd why  
+  
+  > 언제 유용한가?  
+  > 하나하나의 명령들이 1000시간이 걸린다고 할 때, 명령어 하나하나씩 치는 것과 여러개를 한번에 치는 것은 차이가 있음.  
+  > (여러 개 명령어를 한 번에 치면 알아서 마지막 결과만 나타남.)  
+
+2. 파이프라인: 명령어의 연결
+  > 어떤 프로세스의 출력을 다른 프로세스의 입력으로... 원하는 정보가 포함되어 있는 행을 출력  
+  
+  ex)  
+  $ grep linux linux.txt : 'linux'가 포함된 행 출력  
+  $ ls --help | grep sort : ls --help에서 'sort'가 포함된 행을 출력 (ls --help의 출력을 grep의 입력으로)  
+  $ ls --help | grep sort | grep file : ls --help에서 'sort'와 'file'이 포함된 행을 출력  
+
+### IO Redirection
+1. output   
+  $ ls -l > result.txt : result.txt 확인해보면 ls -l 출력물 담김  
+  
+2. error (에러 결과를 저장하려면? '2>' 를 사용한다. (standard error를 가리킴))  
+  ex) 해당 디렉토리에 rename2.txt가 없을 때  
+  $ rm rename2.txt 2> error.log : error.log에 에러 내용이 담김  
+
+3. input  
+  $ cat hello.txt : cat의 cammand-line arguments로써 역할  
+  $ cat < hello.txt : hello.txt 내용을 standard input으로  
+  $ head -n1 < linux.txt > one.txt : linux.txt 내용을 input, one.txt에 출력물을 저장  
+  
+### 디렉토리 구조
+  /bin: 사용자가 사용하는 명령어 모음  
+  /sbin: 관리자가 사용하는 명령어 모음  
+  /etc: 프로그램 설정을 관리하는 디렉토리  
+  /etc/init.d: daemon의 목적을 가진 프로그램들  
+  /var: 내용이 바뀔 수 있는 파일들 모음  
+  /tmp: 임시파일들. 컴퓨터가 꺼지면 삭제됨  
+  /home: 사용자들의 파일들이 저장되는 디렉토리  
+  /lib: /bin과 /sbin에 있는 프로그램들이 사용하는 라이브러리 모음  
+  /usr: 유저가 다운받은 프로그램들 저장  
